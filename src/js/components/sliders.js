@@ -65,7 +65,7 @@ const cardSlider = new Swiper(".card-product__slider", {
   }
 });
 
-const mobSlider = document.querySelector('.news__body, .about-blog__body');
+const mobSlider = document.querySelector('.news__body, .about-blog__body, .vacancy__sidebar');
 
 let myMobSwiper;
 
@@ -74,7 +74,7 @@ function mobileSlider() {
 		myMobSwiper = new Swiper(mobSlider, {
 			slidesPerView: 1.5,
       freeMode: true,
-			slideClass: 'news-articles__item, .about-blog__item',
+			slideClass: 'news-articles__item, .about-blog__item, .vacancy__sidebar-item',
       breakpoints: {
         414: {
           slidesPerView: 1.2,

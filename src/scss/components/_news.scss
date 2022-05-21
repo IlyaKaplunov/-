@@ -19,7 +19,7 @@
         .news-articles__item {
             width: 25%;
 
-            @include mobile {
+            @include notebook {
                 padding: 16px;
             }
         }

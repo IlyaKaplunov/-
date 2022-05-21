@@ -342,7 +342,7 @@ var cardSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".card-produ
     type: 'bullets'
   }
 });
-var mobSlider = document.querySelector('.news__body, .about-blog__body');
+var mobSlider = document.querySelector('.news__body, .about-blog__body, .vacancy__sidebar');
 var myMobSwiper;
 
 function mobileSlider() {
@@ -350,7 +350,7 @@ function mobileSlider() {
     myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
       slidesPerView: 1.5,
       freeMode: true,
-      slideClass: 'news-articles__item, .about-blog__item',
+      slideClass: 'news-articles__item, .about-blog__item, .vacancy__sidebar-item',
       breakpoints: {
         414: {
           slidesPerView: 1.2
