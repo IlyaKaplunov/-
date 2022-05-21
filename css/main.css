@@ -1943,7 +1943,7 @@ body.lock {
 .news__body .news-articles__item {
   width: 25%;
 }
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .news__body .news-articles__item {
     padding: 16px;
   }
@@ -3466,11 +3466,11 @@ body.lock {
   height: 1px;
   background-color: var(--color-flush);
 }
-.vacancy__sidebar {
+.vacancy__sidebar-wrapper {
   width: 25%;
 }
 @media (max-width: 1024px) {
-  .vacancy__sidebar {
+  .vacancy__sidebar-wrapper {
     width: 100%;
     margin-top: 72px;
   }
