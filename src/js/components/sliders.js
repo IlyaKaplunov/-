@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Thumbs, FreeMode, autoHeight} from "swiper"; 
-Swiper.use([Navigation, Pagination, Thumbs, FreeMode, autoHeight]); 
+import Swiper, { Navigation, Pagination, Thumbs, FreeMode} from "swiper"; 
+Swiper.use([Navigation, Pagination, Thumbs, FreeMode]); 
 
 const gallerySlider = document.querySelector('.gallery__images-slider');
 
@@ -49,7 +49,7 @@ const lettersSlider = new Swiper(".letters__slider", {
       
     },
     414: {
-      slidesPerView: 1.2,
+      slidesPerView: 1.5,
     },
   }
 });
@@ -65,26 +65,30 @@ const cardSlider = new Swiper(".card-product__slider", {
   }
 });
 
-const newsSlider = document.querySelector('.news__body, .about-blog__body');
+const mobSlider = document.querySelector('.news__body, .about-blog__body');
 
-let myNewsSwiper;
+let myMobSwiper;
 
 function mobileSlider() {
-	if (window.innerWidth <= 650 && newsSlider.dataset.mobile == 'false') {
-		myNewsSwiper = new Swiper(newsSlider, {
-			slidesPerView: 1.2,
+	if (window.innerWidth <= 680 && mobSlider.dataset.mobile == 'false') {
+		myMobSwiper = new Swiper(mobSlider, {
+			slidesPerView: 1.5,
       freeMode: true,
-      autoHeight: true,
 			slideClass: 'news-articles__item, .about-blog__item',
+      breakpoints: {
+        414: {
+          slidesPerView: 1.2,
+        }
+      }
 		});
 
-		newsSlider.dataset.mobile = 'true';
+		mobSlider.dataset.mobile = 'true';
 	}
 
-	if (window.innerWidth > 650) {
-		newsSlider.dataset.mobile = 'false';
-		if (newsSlider.classList.contains('swiper-initialized')) {
-			myNewsSwiper.destroy();
+	if (window.innerWidth > 680) {
+		mobSlider.dataset.mobile = 'false';
+		if (mobSlider.classList.contains('swiper-initialized')) {
+			myMobSwiper.destroy();
 		}
 	}
 }

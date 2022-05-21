@@ -29,10 +29,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 400px) {
-        display: block;
-    }
-
     &__item {
         padding: 31px 31px 29px;
         border: 1px solid #3B4C64;
@@ -63,10 +59,10 @@
     &__photo {
         margin-bottom: 25px;
 
-        
         @include tablet {
             width: 100%;
             object-fit: cover;
+            margin-bottom: 20px;
         }
 
         img {

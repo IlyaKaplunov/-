@@ -13,6 +13,31 @@
         @include notebook {
             grid-template-columns: repeat(6, 1fr);
         }
+
+        .news-articles__item {
+            grid-column: 3 span;
+
+            @include mobile {
+                grid-column: 12 span;
+                padding: 16px;
+            }
+
+            &--big {
+                grid-column: 6 span;
+    
+                @include mobile {
+                    grid-column: 12 span;
+                }
+    
+                .news-articles__bottom {
+                    p {
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

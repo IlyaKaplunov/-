@@ -6,16 +6,21 @@
         padding: 70px 0; 
     }
 
+   &__wrapper {
+       margin: 0 -15px;
+   }
+
     &__title {
         margin-bottom: 40px;
     }
 
     &__body {
+        padding: 0 15px;
         .news-articles__item {
             width: 25%;
 
             @include mobile {
-                width: 100%;
+                padding: 16px;
             }
         }
         margin-bottom: 30px;
@@ -32,19 +37,15 @@
 
 .news-articles {
     &__item {
-        grid-column: 3 span;
         padding: 32px;
         border: 1px solid #3B4C64;
+        height: auto;
         display: flex;
         flex-direction: column;
-        height: 100%;
         align-items: flex-start;
         transition: all 0.3s ease-in-out;
 
-        @include notebook {
-            padding: 16px;
-            grid-column: 12 span;
-        }
+        
 
         &:hover {
             background-color: var(--color-flush);
@@ -61,22 +62,6 @@
         &:nth-child(2) {
             .news-articles__title {
                 margin-top: 33px;
-            }
-        }
-
-        &--big {
-            grid-column: 6 span;
-
-            @include mobile {
-                grid-column: 12 span;
-            }
-
-            .news-articles__bottom {
-                p {
-                    @include tablet {
-                        display: none;
-                    }
-                }
             }
         }
     }

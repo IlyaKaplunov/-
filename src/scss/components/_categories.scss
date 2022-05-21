@@ -28,14 +28,14 @@
         }
 
         @include mobile {
-            padding: 16px;
+            padding: 16px 8px 8px;
         }
 
         &:nth-child(n + 5) {
             padding-bottom: 60px;
 
             @include mobile {
-                padding-bottom: 20px;
+                padding-bottom: 14px;
             }
         }
 
@@ -71,7 +71,7 @@
             transition: all 0.3s ease-in-out;
         }
         @include mobile {
-            font-size: 11px;
+            font-size: 15px;
             margin-top: 20px;
             br {
                 display: none;

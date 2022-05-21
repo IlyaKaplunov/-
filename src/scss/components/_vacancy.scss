@@ -116,23 +116,20 @@
     &__sidebar {
         width: 25%;
 
-        .swiper-wrapper {
-            display: block;
-
-            @include notebook {
-                display: flex !important;
-            }
-        }
-
         @include notebook {
             width: 100%;
             margin-top: 72px;
         }
         
+        
+        
         &-item {
             padding: 25px 32px 34px;
             border: 1px solid #3B4C64;
             
+            @include tablet {
+                padding: 16px;
+            }
             &:not(:last-child) {
                 border-bottom: 1px solid #3B4C64;
             }

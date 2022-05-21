@@ -281,7 +281,7 @@ document.addEventListener('keydown', function (e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.autoHeight]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode]);
 var gallerySlider = document.querySelector('.gallery__images-slider');
 
 if (gallerySlider) {
@@ -328,7 +328,7 @@ var lettersSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".letters
       slidesPerView: 2.5
     },
     414: {
-      slidesPerView: 1.2
+      slidesPerView: 1.5
     }
   }
 });
@@ -342,25 +342,29 @@ var cardSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".card-produ
     type: 'bullets'
   }
 });
-var newsSlider = document.querySelector('.news__body, .about-blog__body');
-var myNewsSwiper;
+var mobSlider = document.querySelector('.news__body, .about-blog__body');
+var myMobSwiper;
 
 function mobileSlider() {
-  if (window.innerWidth <= 650 && newsSlider.dataset.mobile == 'false') {
-    myNewsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](newsSlider, {
-      slidesPerView: 1.2,
+  if (window.innerWidth <= 680 && mobSlider.dataset.mobile == 'false') {
+    myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
+      slidesPerView: 1.5,
       freeMode: true,
-      autoHeight: true,
-      slideClass: 'news-articles__item, .about-blog__item'
+      slideClass: 'news-articles__item, .about-blog__item',
+      breakpoints: {
+        414: {
+          slidesPerView: 1.2
+        }
+      }
     });
-    newsSlider.dataset.mobile = 'true';
+    mobSlider.dataset.mobile = 'true';
   }
 
-  if (window.innerWidth > 650) {
-    newsSlider.dataset.mobile = 'false';
+  if (window.innerWidth > 680) {
+    mobSlider.dataset.mobile = 'false';
 
-    if (newsSlider.classList.contains('swiper-initialized')) {
-      myNewsSwiper.destroy();
+    if (mobSlider.classList.contains('swiper-initialized')) {
+      myMobSwiper.destroy();
     }
   }
 }

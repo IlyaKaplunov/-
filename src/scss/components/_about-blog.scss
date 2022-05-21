@@ -2,18 +2,25 @@
     background-color: var(--color-zodiac);
     padding-top: 57px;
 
+    &__wrapper {
+        margin: 0 -15px;
+    }
+
     &__title {
         margin-bottom: 30px;
-        
+    }
+
+    &__body {
+        padding: 0 15px;
     }
 
     &__item {
         width: 33.3333%;
         padding: 40px;
         border: 1px solid #3B4C64;
+        height: auto;
         display: flex;
         flex-direction: column;
-        height: 100%;
         align-items: flex-start;
 
         @include notebook {
