@@ -1,0 +1,171 @@
+.vacancy {
+    background-color: var(--color-zodiac);
+    padding: 55px 0 104px 0;
+
+    @include mobile {
+        padding: 30px 0 64px 0;
+    }
+
+    &__content {
+        display: flex;
+        border: 1px solid #3B4C64;
+
+        @include notebook {
+            display: block;
+            border: none;
+        }
+    }
+
+    &__info {
+        width: 75%;
+        border-right: 1px solid #3B4C64;
+        padding: 40px 55px 56px;
+        color: var(--color-white);
+
+        @include notebook {
+            width: 100%;
+            border: none;
+        }
+
+        @include tablet {
+            padding: 12px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 120%;
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+
+    &__list {
+        margin: 40px 0;
+
+        @include mobile {
+           margin: 20px 0;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        position: relative;
+        font-size: 20px;
+        line-height: 140%;
+        padding-left: 21px;
+        letter-spacing: 0.01em;
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12px;
+            height: 1px;
+            background-color: var(--color-flush);
+        }
+    }
+
+    &__enum {
+        &:not(:last-child) {
+            margin-bottom: 36px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            margin-bottom: 3px;
+        }
+
+        li {
+            font-weight: 300;
+            position: relative;
+            padding-left: 17px;
+            font-size: 16px;
+            letter-spacing: 0.012em;
+
+            @include mobile {
+                font-size: 14px;
+            }
+            
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 10px;
+                height: 1px;
+                background-color: var(--color-flush);
+            }
+        }
+    }
+
+    &__sidebar {
+        width: 25%;
+
+        .swiper-wrapper {
+            display: block;
+
+            @include notebook {
+                display: flex !important;
+            }
+        }
+
+        @include notebook {
+            width: 100%;
+            margin-top: 72px;
+        }
+        
+        &-item {
+            padding: 25px 32px 34px;
+            border: 1px solid #3B4C64;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #3B4C64;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                color: var(--color-white);
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 140%;
+                color: var(--color-gray);
+                margin-bottom: 15px;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                display: block;
+                color: var(--color-flush);
+                margin-bottom: 50px;
+            }
+
+            a {
+                padding: 8px 18px;
+            }
+        }
+    }
+}
+

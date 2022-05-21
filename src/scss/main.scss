@@ -1,0 +1,57 @@
+// Basic
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// Partials (Common)
+@import "./components/header";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/breadcrumbs";
+
+// Partials (Main page)
+@import "./components/intro";
+@import "./components/catalog-block";
+@import "./components/about-block";
+@import "./components/advantages";
+@import "./components/news";
+
+// Partials (About - main)
+@import "./components/about-blog";
+@import "./components/gallery";
+@import "./components/map";
+@import "./components/about-content";
+@import "./components/delivery";
+@import "./components/letters";
+
+// Partials (Catalog main)
+@import "./components/categories";
+
+// Partials (Catalog - open)
+@import "./components/catalog-list";
+
+// Partials (Product card)
+@import "./components/product-info";
+
+// Partials (News main)
+@import "./components/news-list";
+
+// Partials (News post)
+@import "./components/post";
+
+// Partials (Purchases)
+@import "./components/purchases-info";
+
+// Partials (Jobs)
+@import "./components/vacancies";
+
+// Partials (Position)
+@import "./components/vacancy";
+
+// Partials (Contacts main)
+@import "./components/contacts-info";
+@import "./components//workers";
+
+// Popup 
+@import "./components/popups";

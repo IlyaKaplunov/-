@@ -1,0 +1,104 @@
+.advantages {
+    background-color: var(--color-zodiac);
+    padding-top: 121px;
+
+    @include mobile {
+        padding-top: 70px; 
+    }
+
+    &__title {
+        margin-bottom: 39px;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__item {
+        border: 1px solid #3B4C64;
+        padding: 40px;
+        transition: all 0.3s ease-in-out;
+
+        @include notebook {
+            padding: 16px !important;
+        }
+        
+        &:nth-child(4),
+        &:nth-child(5) {
+            .advantages__icon {
+                svg {
+                    width: 63px;
+                }
+            }
+
+            .advantages__desc {
+                padding-right: 0px;
+            }
+        }
+
+        &:hover {
+            background-color: var(--color-flush);
+
+            .advantages__icon {
+                svg {
+                    stroke: var(--color-white);
+                }
+            }
+
+            .advantages__desc {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    &__icon {
+        svg {
+            width: 78px;
+            height: 78px;
+            object-fit: cover;
+            stroke: var(--color-flush);
+            stroke-width: 4px;
+            fill: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__caption {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: var(--color-white);
+        margin-top: 55px;
+        
+        @include notebook {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray);
+        margin-top: 15px;
+        transition: all 0.3s ease-in-out;
+
+        @include notebook {
+            font-size: 12px;
+            br {
+                display: none;
+            }
+        }
+    }
+}

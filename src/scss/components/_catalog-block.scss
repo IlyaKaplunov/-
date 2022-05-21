@@ -1,0 +1,138 @@
+.catalog-block {
+    padding-top: 113px;
+    background-color: var(--color-zodiac);
+
+    @include mobile {
+       padding-top: 40px; 
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 31px;
+    }
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include middledesk {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 400px) {
+        display: block;
+    }
+
+    &__item {
+        padding: 31px 31px 29px;
+        border: 1px solid #3B4C64;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 0.3s ease-in-out;
+
+        @include mobile {
+            padding: 12px;
+        }
+
+        &:hover {
+            background-color: var(--color-flush);
+
+            .catalog__price {
+                color: var(--color-white);
+            }
+
+            .catalog__btn {
+                background-color: var(--color-hover);
+            }
+        }
+    }
+    
+
+    &__photo {
+        margin-bottom: 25px;
+
+        
+        @include tablet {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        img {
+            max-width: 100%;
+
+            @include tablet {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__caption {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: var(--color-white);
+        margin-bottom: 9px;
+
+        @include tablet {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: rgba(#fff, 0.6);
+        margin-bottom: 14px;
+        
+        span {
+            padding: 0 5px;
+        }
+
+        @include tablet {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--color-flush);
+        flex: 1 1 auto;
+        margin-bottom: 24px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__btn {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+        padding: 8px 18px;
+    }
+
+    &__all {
+        span {
+            background: url("../img/svg/All.svg") left center no-repeat;
+            background-size: 16px 16px;
+            padding-left: 30px;
+        }
+    }
+}

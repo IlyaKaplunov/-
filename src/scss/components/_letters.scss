@@ -1,0 +1,74 @@
+.letters {
+    background-color: var(--color-zodiac);
+    padding-top: 106px;
+    padding-bottom: 117px;
+
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__body {
+        display: flex;
+        border: 1px solid #3B4C64;
+    }
+
+    &__slider {
+        overflow: hidden;
+        &-item {
+            border-right: 1px solid #3B4C64;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 47px 35px 40px;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+
+        &-caption {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            color: var(--color-white);
+            margin-top: 40px;
+        }
+    }
+
+    &__switches {
+        border-left: 1px solid #3B4C64;
+        position: relative;
+        min-width: 82px;
+        
+        @include tablet {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 1px;
+            background-color: #3B4C64;
+        }
+    }
+
+    &__switch {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 100;
+
+        &--prev {
+            bottom: 21%;
+        }
+
+        &--next {
+            top: 21%;
+        }
+    }
+}
+

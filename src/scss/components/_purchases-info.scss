@@ -1,0 +1,123 @@
+.purchases-info {
+    background-color: var(--color-zodiac);
+    padding: 57px 0 106px 0;
+
+    @include mobile {
+        padding: 24px 0 64px 0;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__body {
+        color: var(--color-white);
+        border: 1px solid #3B4C64;
+    }
+
+    &__row {
+        display: flex;
+
+        @include notebook {
+            flex-direction: column;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #3B4C64;
+        }
+    }
+
+    &__col {
+        padding: 45px 55px 59px;
+
+        @include notebook {
+            padding: 24px;
+        }
+
+        &:first-child {
+            flex-basis: 40%;
+        }
+
+        &:last-child {
+            flex-basis: 60%;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+
+        @include mobile {
+            font-size: 18px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        color: var(--color-flush);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        margin-top: 124px;
+
+        @include notebook {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        @include mobile {
+            display: none;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        padding-top: 0px;
+        li {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 120%;
+            position: relative;
+            padding-left: 25px;
+
+            @include mobile {
+                font-size: 14px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15.5px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 12px;
+                height: 2px;
+                background-color: var(--color-flush);
+            }
+        }
+    }
+
+    &__caption {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+
+        @include mobile {
+            font-size: 18px;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+

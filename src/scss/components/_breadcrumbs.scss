@@ -1,0 +1,46 @@
+.breadcrumbs {
+    padding-top: 171px;
+    background-color: var(--color-zodiac);
+
+
+    @include minidesk {
+        padding-top: 120px;
+    }
+    &__inner {
+        @include flex-v-center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 32px;
+      
+            &::after {
+              content: "";
+              position: absolute;
+              right: -24px;
+              top: 7px;
+              width: 16px;
+              height: 1px;
+              background-color: #9a9ca5;
+
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 100%;
+        color: rgba(#fff, 0.5);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+        &:not([href]) {
+            font-weight: 500;
+        }
+    }
+}
+
