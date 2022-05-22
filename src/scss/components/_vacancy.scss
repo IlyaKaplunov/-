@@ -1,3 +1,4 @@
+
 .vacancy {
     background-color: var(--color-zodiac);
     padding: 55px 0 104px 0;
@@ -114,6 +115,25 @@
     }
 
     &__sidebar {
+        
+        .swiper-wrapper {
+            display: block;
+
+            @include mobile {
+                display: flex;
+            }
+        }
+        &-subtitle {
+            display: none;
+            color: var(--color-white);
+            font-size: 36px;
+            margin-bottom: 24px;
+
+            @include notebook {
+                display: block;
+                font-size: 24px;
+            }
+        }
        
         &-wrapper {
             width: 25%;
@@ -127,10 +147,17 @@
         &-item {
             padding: 25px 32px 34px;
             border: 1px solid #3B4C64;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
             
             @include tablet {
                 padding: 16px;
             }
+
 
             &:not(:last-child) {
                 border-bottom: 1px solid #3B4C64;
@@ -159,6 +186,7 @@
                 display: block;
                 color: var(--color-flush);
                 margin-bottom: 50px;
+                flex: 1 1 auto;
             }
 
             a {
@@ -167,4 +195,3 @@
         }
     }
 }
-

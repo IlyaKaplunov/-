@@ -65,27 +65,22 @@ const cardSlider = new Swiper(".card-product__slider", {
   }
 });
 
-const mobSlider = document.querySelector('.news__body, .about-blog__body, .vacancy__sidebar');
+const mobSlider = document.querySelector('.news__body, .about-blog__body, .vacancy__sidebar, .post__sidebar');
 
 let myMobSwiper;
 
 function mobileSlider() {
-	if (window.innerWidth <= 680 && mobSlider.dataset.mobile == 'false') {
+	if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
 		myMobSwiper = new Swiper(mobSlider, {
-			slidesPerView: 1.5,
+			slidesPerView: 1.2,
       freeMode: true,
-			slideClass: 'news-articles__item, .about-blog__item, .vacancy__sidebar-item',
-      breakpoints: {
-        414: {
-          slidesPerView: 1.2,
-        }
-      }
+			slideClass: 'news-articles__item, .about-blog__item, .vacancy__sidebar-item, .post__sidebar-item'
 		});
 
 		mobSlider.dataset.mobile = 'true';
 	}
 
-	if (window.innerWidth > 680) {
+	if (window.innerWidth > 600) {
 		mobSlider.dataset.mobile = 'false';
 		if (mobSlider.classList.contains('swiper-initialized')) {
 			myMobSwiper.destroy();
