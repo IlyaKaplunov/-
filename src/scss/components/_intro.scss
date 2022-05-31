@@ -14,7 +14,8 @@
         width: 730px;
         height: 600px;
         background: #FF7A00;
-        filter: blur(350px);
+        filter: blur(280px);
+        z-index: 1;
     }
 
     &__body {
@@ -23,7 +24,7 @@
         flex: 1;
         position: relative;
         z-index: 2;
-
+        
         @include tablet {
             flex-direction: column;
         }

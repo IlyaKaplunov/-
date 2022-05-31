@@ -314,7 +314,7 @@ if (gallerySlider) {
 
 var lettersSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".letters__slider", {
   speed: 600,
-  slidesPerView: 1,
+  slidesPerView: 1.5,
   loop: true,
   navigation: {
     nextEl: ".letters__switch--next",

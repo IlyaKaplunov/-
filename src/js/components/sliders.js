@@ -33,7 +33,7 @@ if (gallerySlider) {
 
 const lettersSlider = new Swiper(".letters__slider", { 
   speed: 600,
-  slidesPerView: 1, 
+  slidesPerView: 1.5, 
   loop: true,
   navigation: { 
     nextEl: ".letters__switch--next", 

@@ -1298,8 +1298,9 @@ body.lock {
   width: 730px;
   height: 600px;
   background: #FF7A00;
-  -webkit-filter: blur(350px);
-  filter: blur(350px);
+  -webkit-filter: blur(280px);
+  filter: blur(280px);
+  z-index: 1;
 }
 .intro__body {
   display: -webkit-box;
@@ -2392,6 +2393,7 @@ body.lock {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2399,6 +2401,9 @@ body.lock {
 }
 .letters__slider-img {
   max-width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .letters__slider-caption {
   font-weight: 400;
