@@ -1,12 +1,8 @@
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-
+    background-color: var(--color-pearl);
+    
     &--bg {
-
+        background-color: var(--color-zodiac);
         .header__top-left,
         .header__top-right {
             padding: 0;
@@ -17,6 +13,8 @@
         @include flex-all-sb;
         padding: 0 calc(50% - 640px);
         border-bottom: 1px solid rgba(#fff, 0.15);
+        position: relative;
+        z-index: 10;
 
         @media (max-width: 1310px) {
             padding: 0px calc(50% - 620px);
@@ -54,6 +52,7 @@
 
     &__connect {
         display: flex;
+
         &-link {
             font-weight: 500;
             font-size: 16px;
@@ -80,6 +79,11 @@
         padding: 26px calc(50% - 640px);
         @include flex-all-sb;
         border-bottom: 1px solid rgba(#fff, 0.15);
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+
+        
 
         @media (max-width: 1310px) {
             padding: 26px calc(50% - 620px);

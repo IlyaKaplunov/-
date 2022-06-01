@@ -5,9 +5,6 @@
 import { mobileCheck } from "./functions/mobile-check";
 console.log(mobileCheck())
 
-import "./components/burger";
-import "./components/sliders";
-import "./components/popups";
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
