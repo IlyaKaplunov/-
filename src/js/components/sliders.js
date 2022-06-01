@@ -5,18 +5,17 @@ const gallerySlider = document.querySelector('.gallery__images-slider');
 
 if (gallerySlider) {
   const workSlider = new Swiper('.gallery__images-thumbs', {
-    slidesPerView: 7,
-    
+    slidesPerView: 5.5,
     freeMode: true,
     watchSlidesProgress: true,
-    /* breakpoints: {
+    breakpoints: {
       768: {
-        slidesPerView: 6.5,
+        slidesPerView: 7,
       },
       576: {
         slidesPerView: 5.5,
       }
-    } */
+    }
   });
   const gallerySliderThumbs = new Swiper(gallerySlider, {
     slidesPerView: 1,
@@ -45,8 +44,6 @@ const lettersSlider = new Swiper(".letters__slider", {
     },
     725: {
       slidesPerView: 2.5,
-      
-      
     },
     414: {
       slidesPerView: 1.5,
@@ -64,6 +61,8 @@ const cardSlider = new Swiper(".card-product__slider", {
     type: 'bullets'
   }
 });
+
+
 
 const mobSlider = document.querySelector('.news__body, .about-blog__body, .vacancy__sidebar, .post__sidebar');
 
