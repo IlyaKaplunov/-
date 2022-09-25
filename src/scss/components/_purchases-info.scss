@@ -80,6 +80,7 @@
 
     &__list {
         padding-top: 0px;
+
         li {
             font-weight: 300;
             font-size: 22px;
@@ -114,6 +115,7 @@
 
         @include mobile {
             font-size: 18px;
+            
             br {
                 display: none;
             }

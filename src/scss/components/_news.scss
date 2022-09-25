@@ -6,9 +6,9 @@
         padding: 70px 0; 
     }
 
-   &__wrapper {
+    &__wrapper {
        margin: 0 -15px;
-   }
+    }
 
     &__title {
         margin-bottom: 40px;
@@ -16,6 +16,8 @@
 
     &__body {
         padding: 0 15px;
+        margin-bottom: 30px;
+
         .news-articles__item {
             width: 25%;
 
@@ -23,7 +25,6 @@
                 padding: 16px;
             }
         }
-        margin-bottom: 30px;
     }
 
     &__all {
@@ -44,8 +45,6 @@
         flex-direction: column;
         align-items: flex-start;
         transition: all 0.3s ease-in-out;
-
-        
 
         &:hover {
             background-color: var(--color-flush);
@@ -99,6 +98,7 @@
 
         @include notebook {
             font-size: 15px;
+            
             br {
                 display: none;
             }

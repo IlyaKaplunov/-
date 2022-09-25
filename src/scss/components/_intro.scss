@@ -41,7 +41,6 @@
             order: 2;
             width: 100%;
         }
-        
     }
 
     &__title {
@@ -53,6 +52,7 @@
 
         @include tablet {
             font-size: 27px;
+            
             br {
                 display: none;
             }

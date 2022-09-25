@@ -1,4 +1,3 @@
-
 .vacancy {
     background-color: var(--color-zodiac);
     padding: 55px 0 104px 0;
@@ -116,6 +115,7 @@
 
     &__sidebar {
         padding: 0 15px;
+
         .swiper-wrapper {
             display: block;
 
@@ -123,6 +123,7 @@
                 display: flex;
             }
         }
+
         &-subtitle {
             display: none;
             color: var(--color-white);
@@ -156,12 +157,9 @@
             flex-direction: column;
             align-items: flex-start;
 
-
-            
             @include tablet {
                 padding: 16px;
             }
-
 
             &:not(:last-child) {
                 border-bottom: 1px solid #3B4C64;

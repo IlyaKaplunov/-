@@ -141,12 +141,11 @@
         }
     }
 
-    
-
     &__nav {
         @include notebook {
             padding-left: 17px;
         }
+
         &-list {
             display: flex;
 
@@ -201,11 +200,9 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-
-            
+ 
             &:not(:last-child) {
                 margin-right: 50px;
-
 
                 @include notebook {
                     margin-right: 20px;
