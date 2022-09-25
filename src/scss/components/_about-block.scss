@@ -38,8 +38,6 @@
     }
 }
 
-
-
 .about {
     
     &__box {
@@ -82,8 +80,6 @@
         }
     }
 
-    
-
     &__item {
         border: 1px solid rgba(255, 255, 255, 0.1);
         padding: 48px 48px 48px 48px;
@@ -122,18 +118,17 @@
 
         @include notebook {
             font-size: 14px;
+
             br {
                 display: none;
             }
         }
     }
     
-
     &__img {
         position: relative;
         height: 100%;
         
-
         img {
             height: 100%;
             object-fit: cover;
