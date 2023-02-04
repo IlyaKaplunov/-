@@ -140,6 +140,10 @@
                 transform: translateX(0%);
             }
 
+            @include notebook {
+                width: 48%;
+            }
+
             @include tablet {
                 width: 45%;
             }
@@ -164,6 +168,10 @@
         li {
             &:not(:last-child) {
                 margin-right: 37px;
+
+                @include mobile {
+                    margin-right: 0;
+                }
             }
 
             @include minidesk {

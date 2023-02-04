@@ -3,7 +3,7 @@
     padding: 35px 0 40px 0;
 
     @include minidesk {
-        padding-top: 120px;
+        padding-top: 30px;
     }
 
     @include tablet {
@@ -107,6 +107,7 @@
 
         @include notebook {
             transform: none;
+            margin-left: 20px;
         }
 
         @include tablet {
